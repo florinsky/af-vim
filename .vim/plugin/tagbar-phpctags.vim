@@ -11,7 +11,7 @@ if !exists('g:tagbar_phpctags_bin')
 endif
 
 if !exists('g:tagbar_phpctags_memory_limit')
-    let g:tagbar_phpctags_memory_limit = '128M'
+    let g:tagbar_phpctags_memory_limit = '512M'
 endif
 
 let g:tagbar_type_php = {
