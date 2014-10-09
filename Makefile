@@ -23,4 +23,4 @@ build-phpctags: download
 	cd $(INSTALL_DIR)/bin.src/phpctags.src && make dist-clean
 
 install: download linking build-phpctags
-	vim
+	echo "Done!"
