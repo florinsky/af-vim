@@ -31,10 +31,10 @@
 ## How to install
 
 Just run the command:
-> curl -L goo.gl/mC5h5x | sh
+> curl -L http://goo.gl/0Pmeap | make -f - install
 
 or
-> curl https://raw.githubusercontent.com/florinsky/af-vim/master/install.sh | sh
+> curl https://raw.githubusercontent.com/florinsky/af-vim/master/Makefile | make -f - install 
 
 ## TODO:
 * Commenter
