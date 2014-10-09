@@ -40,4 +40,9 @@ or
 * Commenter
 * Project manager
 * View marks
+* Update ctags on file change/save and update it in CtrlP
+* Check the omnicompletion - how it work? There is some problem ...
+* Check C-g - it does not search in all opened biffers
+* How to search in all files?
+
 
