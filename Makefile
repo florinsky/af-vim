@@ -17,10 +17,13 @@ linking: download
 	ln -s $(INSTALL_DIR)/.vim $(HOME_DIR)/.vim
 	ln -s $(INSTALL_DIR)/.vimrc $(HOME_DIR)/.vimrc
 
+build-binaries: build-phpctags
+	echo "Binaries!"
+
 build-phpctags: download
 	cd $(INSTALL_DIR)/bin.src/phpctags.src && make
 	mv $(INSTALL_DIR)/bin.src/phpctags.src/phpctags $(BIN_DIR)/
 	cd $(INSTALL_DIR)/bin.src/phpctags.src && make dist-clean
 
-install: download linking build-phpctags
+install: download linking build-binaries
 	echo "Done!"
