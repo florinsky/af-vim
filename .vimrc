@@ -19,8 +19,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <C-b> :CtrlPBuffer<CR>
 map <C-g> :CtrlPLine<CR>
 map <C-f> :CtrlPLine %<CR>
+map <C-t> :CtrlPTag<CR>
 
-nmap <C-t> :TagbarToggle<CR>
+nmap <C-o> :TagbarToggle<CR>
 
 let g:airline_theme='dark'
 let g:airline_enable_fugitive=1
