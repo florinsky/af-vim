@@ -67,4 +67,9 @@ function! Highlighting()
 endfunction
 nnoremap <silent> <expr> <CR> Highlighting()
 
+set listchars=tab:▸\ ,trail:·
+set list
+
+set ffs=unix,dos,mac
+set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866
 
