@@ -39,6 +39,5 @@ or
 ## TODO:
 * Commenter
 * Project manager
-* Display tabs and spaces
 * View marks
 
