@@ -1,34 +1,34 @@
-Plugins Keys
-============
+# Plugins Keys
 
-Panels:
+## Panels:
+* C-t - toggle TAGs panel
+* C-e - toggle file explorer
 
-C-t - toggle TAGs panel
+## Popup:
+* C-p - search files (by name)
+* C-f - find in current file
+* C-g - find in all opened files
+* C-b - buffer list
 
-C-e - toggle file explorer
+## Auto-complete (php):
+* C-space
 
+## Search under cursor:
+* CR - toggle highlight the word under cusor
 
-Popup:
+## Usefull Commands:
+* :noh - remove highlighted search word
 
-C-p - search files (by name)
+## Fugitive (commands):
+* :Gstatus
 
-C-f - find in current file
+## Snippets (tab key):
+* ec - echo "string";
 
-C-g - find in all opened files
+## TODO:
+* Commenter
+* Project manager
+* Display tabs and spaces
+* View marks
+* PHP ctags
 
-C-b - buffer list
-
-
-Auto-complete (php):
-
-C-space
-
-
-Search under cursor:
-
-CR - toggle highlight the word under cusor
-
-
-Commands:
-
-:noh - remove highlighted search word
