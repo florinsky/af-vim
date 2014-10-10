@@ -3,7 +3,7 @@
 ## Keys explanation
 
 ### Panels:
-* C-t - toggle TAGs panel
+* C-o - toggle TAGs panel
 * C-e - toggle file explorer
 
 ### Popup:
@@ -11,6 +11,7 @@
 * C-f - find in current file
 * C-g - find in all opened files
 * C-b - buffer list
+* C-t - search by tags (ctags)
 
 ### Auto-complete (php):
 * C-space
@@ -40,5 +41,4 @@ or
 * Project manager
 * Display tabs and spaces
 * View marks
-* PHP ctags
 
