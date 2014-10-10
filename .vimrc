@@ -10,6 +10,8 @@ set shiftwidth=4
 set smarttab
 set expandtab
 set smartindent
+set ignorecase
+set incsearch
 
 map <C-e> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -51,4 +53,17 @@ inoremap <expr> <Nul> Auto_complete_string()
 inoremap <expr> <C-Space> Auto_complete_string()
 
 set completeopt-=preview
+
+let g:highlighting = 0
+function! Highlighting()
+    if g:highlighting == 1 && @/ =~ '^\\<'.expand('<cword>').'\\>$'
+        let g:highlighting = 0
+        return ":silent nohlsearch\<CR>"
+    endif
+    let @/ = '\<'.expand('<cword>').'\>'
+    let g:highlighting = 1
+    return ":silent set hlsearch\<CR>"
+endfunction
+nnoremap <silent> <expr> <CR> Highlighting()
+
 
