@@ -1,29 +1,39 @@
-# Plugins Keys
+# My VIM build (for PHP especially)
 
-## Panels:
+## Keys explanation
+
+### Panels:
 * C-t - toggle TAGs panel
 * C-e - toggle file explorer
 
-## Popup:
+### Popup:
 * C-p - search files (by name)
 * C-f - find in current file
 * C-g - find in all opened files
 * C-b - buffer list
 
-## Auto-complete (php):
+### Auto-complete (php):
 * C-space
 
-## Search under cursor:
+### Search under cursor:
 * CR - toggle highlight the word under cusor
 
-## Usefull Commands:
+### Usefull Commands:
 * :noh - remove highlighted search word
 
-## Fugitive (commands):
+### Fugitive (commands):
 * :Gstatus
 
-## Snippets (tab key):
+### Snippets (tab key):
 * ec - echo "string";
+
+## How to install
+
+Just run the command:
+> curl -L goo.gl/mC5h5x | sh
+
+or
+> curl https://raw.githubusercontent.com/florinsky/af-vim/master/install.sh | sh
 
 ## TODO:
 * Commenter
