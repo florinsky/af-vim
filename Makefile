@@ -3,6 +3,9 @@ INSTALL_DIR=$(HOME_DIR)/.af_vim_config
 BIN_DIR=$(HOME_DIR)/bin
 REPO=https://github.com/florinsky/af-vim.git
 
+install-system-tools:
+	sudo apt-get install ant atop autoconf automake bison build-essential curl git git-core libc6-dev libreadline6 libreadline6-dev libsqlite3-dev libssl-dev libtool libxml2-dev libxslt-dev libyaml-dev mysql-server ncurses-dev openssl php5  php5-cli php5-curl php5-pgsql php5-sqlite php5-xdebug php5-xsl phpmyadmin php-pear sqlite3 subversion vim zlib1g zlib1g-dev openssh-server ssh iotop rar screen ncftp p7zip smbnetfs smbclient apache2-suexec libapache2-mod-fcgid php5-fpm libfcgi0ldbl libmysql-java bc dnsutils realpath
+
 clean:
 	@echo "Cleaning ..."
 	cd $(HOME_DIR) && rm -rf .vim .vimrc $(INSTALL_DIR)
