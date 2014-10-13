@@ -73,3 +73,23 @@ set list
 set ffs=unix,dos,mac
 set fencs=utf-8,cp1251,koi8-r,ucs-2,cp866
 
+function! DelTagOfFile(file)
+    let fullpath = a:file
+    let cwd = getcwd()
+    let tagfilename = cwd . "/tags"
+    let f = substitute(fullpath, cwd . "/", "", "")
+    let f = escape(f, './')
+    let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+    let resp = system(cmd)
+endfunction
+
+function! UpdateTags()
+    let f = expand("%:p")
+    let cwd = getcwd()
+    let tagfilename = cwd . "/tags"
+    let cmd = 'phpctags -R -a -f ' . tagfilename . ' ' . '"' . f . '"'
+    call DelTagOfFile(f)
+    let resp = system(cmd)
+endfunction
+autocmd BufWritePost *.php call UpdateTags()
+
