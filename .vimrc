@@ -22,6 +22,7 @@ map <C-f> :CtrlPLine %<CR>
 map <C-t> :CtrlPTag<CR>
 
 nmap <C-o> :TagbarToggle<CR>
+nnoremap <C-a> <C-t>
 
 let g:airline_theme='dark'
 let g:airline_enable_fugitive=1
