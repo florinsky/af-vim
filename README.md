@@ -12,6 +12,7 @@
 * C-g - find in all opened files
 * C-b - buffer list
 * C-t - search by tags (ctags)
+* C-l - search by buffers, file names (unit plugin)
 
 ### Navigation
 * e - open file for edition

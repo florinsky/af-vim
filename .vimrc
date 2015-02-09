@@ -24,6 +24,8 @@ map <C-t> :CtrlPTag<CR>
 nmap <C-o> :TagbarToggle<CR>
 nnoremap <C-a> <C-t>
 
+nnoremap <C-l> :<C-u>Unite -buffer-name=files -start-insert buffer file_rec/async:!<cr>
+
 let g:airline_theme='dark'
 let g:airline_enable_fugitive=1
 let g:airline_enable_syntastic=1
