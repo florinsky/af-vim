@@ -4,6 +4,7 @@ BIN_DIR=$(HOME_DIR)/bin
 REPO=https://github.com/florinsky/af-vim.git
 
 install-system-tools:
+	sudo apt-get update
 	sudo apt-get install ant atop autoconf automake bison build-essential curl git git-core libc6-dev libreadline6 libreadline6-dev libsqlite3-dev libssl-dev libtool libxml2-dev libxslt-dev libyaml-dev mysql-server ncurses-dev openssl php5  php5-cli php5-curl php5-pgsql php5-sqlite php5-xdebug php5-xsl phpmyadmin php-pear sqlite3 subversion vim zlib1g zlib1g-dev openssh-server ssh iotop rar screen ncftp p7zip smbnetfs smbclient apache2-suexec libapache2-mod-fcgid php5-fpm libfcgi0ldbl libmysql-java bc dnsutils realpath
 
 clean:
@@ -28,7 +29,7 @@ linking: download
 	ln -s $(INSTALL_DIR)/.vimrc $(HOME_DIR)/.vimrc
 	@echo "Done"
 
-build-binaries: build-phpctags build-composer
+build-binaries: build-phpctags build-composer build-vimproc
 	@echo "Binaries!"
 
 build-phpctags: download
@@ -41,6 +42,11 @@ build-phpctags: download
 build-composer:
 	@echo "Composer install path: $(BIN_DIR)"
 	curl -s http://getcomposer.org/installer | php -- --install-dir=$(BIN_DIR)
+
+build-vimproc:
+	@echo "Building vimproc ..."
+	cd $(INSTALL_DIR)/.vim/bundle/vimproc.vim && make
+	@echo "Done\n"
 
 install: test download linking build-binaries
 	@echo "Done!"
