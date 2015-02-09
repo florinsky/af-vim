@@ -45,6 +45,20 @@
 * E - select word in visual mode
 * U - uppercase the selected word
 * u - lowercase the selected word
+* Tab - auto-complete for PHP
+* <C-n> - general auto-completion (in edit mode)
+* ~ - toggle case under coursor/selection
+
+### Registers
+* "ay - copy selection to the "a register
+* "ap - past the content of the "a register
+* "ayy - copy the current line to "a
+
+### Windows
+* C-w o - maximize window
+* C-w c - close window
+* C-w s - split horizontally
+* C-w v - split vertically
 
 ### Tabs
 * tabe - open new tab
